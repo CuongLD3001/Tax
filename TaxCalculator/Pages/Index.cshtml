@@ -1,0 +1,40 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Công cụ tính thuế: </h1>
+<form method="post" class="form-control">
+    Thu nhap: <input class="form-control" required type="number" asp-for="Tax.Income" /><br />
+    Muc luong dong bao hiem:
+    <input class="form-check-input" type="radio" name="Tax.SalaryInsurance" value="1" />Tren luong chinh thuc
+    <input class="form-check-input" type="radio" name="Tax.SalaryInsurance" id="input-other" value="1" />Khac
+    <input class="form-control" type="number" id="input-number" name="otherNumber" readonly /> <br />
+    Vung: <br />
+    <input class="form-check-input" type="radio" name="Tax.Area" value="1" />I
+    <input class="form-check-input" type="radio" name="Tax.Area" value="2" />II
+    <input class="form-check-input" type="radio" name="Tax.Area" value="3" />III
+    <input class="form-check-input" type="radio" name="Tax.Area" value="4" />IV <br />
+    So nguoi phu thuoc: <input required type="number" class="form-control" asp-for="Tax.NumberOfDependent" /> <br />
+    <input class="btn btn-primary" type="submit" value="GROSS->NET" />
+</form>
+
+<div class="form-control">
+    Lương Gross: <input class="form-control" type="number" readonly value="@Model.SalaryBeforeTax" /> <br />
+    Lương NET: <input class="form-control" type="number" readonly value="@Model.SalaryAfterTax" /> <br />
+</div>
+@section Scripts{
+    <script>
+        var inputRadio = document.getElementById("input-other");
+        var inputText = document.getElementById("input-number");
+
+        inputRadio.addEventListener("click", function () {
+            if (inputRadio.checked) {
+                inputText.removeAttribute("readonly");
+            } else {
+                inputText.setAttribute("readonly", true);
+            }
+        });
+    </script>
+}

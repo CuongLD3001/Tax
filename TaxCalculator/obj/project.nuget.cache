@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q3HMIGgzBjJGbd0jI0u6HZT36XPfCfaCoQjlY1kCMac8vf6p70O4vPYSzi/E0pzBZF6ZkC3bWULnr5CJRyzwJg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\Downloads\\TaxCalculator\\TaxCalculator\\TaxCalculator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
